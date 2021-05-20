@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Interactief Verhaal</title>
+  </head>
+  <body class="bodyVerhaal">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <!-- als je een modifier gebruikt dan MOET de base class ook aanwezig zijn.
+          als je nav__body--overlay hebt dan moet nav__body ook aanwezig zijn
+        -->
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <!-- hieronder moet nav__body__overlay ook aanwezig zijn. -->
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <!-- bij een javascript id dien je de js-- prefix ervoor te zetten -->
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mainVerhaal">
+      <h1 class="mainVerhaal__header">De revolutie in Syrie</h1>
+      <button
+        class="mainVerhaal__playButton"
+        id="js--playButton"
+        type="button"
+        name="button"
+      ></button>
+    </main>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/buttonClickSound.js"></script>
+  </body>
+</html>

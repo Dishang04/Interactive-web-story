@@ -1,0 +1,1771 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  min-height: 100vh;
+  font-size: 1.8rem;
+  font-family: "Epilogue", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.u-bodyBgColor {
+  background-image: linear-gradient(to top, #bfa782, #e2d6c5);
+}
+
+/* MOBILE NAVIGATION */
+.nav {
+  margin: 2rem 1rem;
+}
+
+.nav__hamburger {
+  font-size: 2.6rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.nav__bodyOverlay {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110%;
+  width: 0%;
+  background-color: darkred;
+  background-image: linear-gradient(to bottom, #831600, #d82400);
+  transition: 0.5s;
+  transition-timing-function: linear;
+  z-index: 5;
+}
+
+.nav__bodyOverlay__content {
+  display: none;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.nav__bodyOverlay__content__closeButton {
+  position: absolute;
+  top: -1rem;
+  right: 3.5rem;
+  width: 3rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.nav__bodyOverlay__content__closeButton:before,
+.nav__bodyOverlay__content__closeButton:after {
+  position: absolute;
+  left: 3rem;
+  content: "";
+  height: 4rem;
+  width: 0.3rem;
+  background-color: black;
+}
+.nav__bodyOverlay__content__closeButton:before {
+  transform: rotate(45deg);
+}
+.nav__bodyOverlay__content__closeButton:after {
+  transform: rotate(-45deg);
+}
+
+.nav__bodyOverlay__content__menu {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav__bodyOverlay__content a {
+  text-decoration: none;
+  color: white;
+  padding: 1.5rem;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  font-size: 2rem;
+  animation-name: menuItems;
+  opacity: 0;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.nav__bodyOverlay__content a:hover {
+  background-color: #ffb4a5;
+  color: black;
+}
+
+.nav__bodyOverlay__content__current {
+  background-color: #3f0b00;
+}
+
+@keyframes menuItems {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*HOME PAGE*/
+.mainHome {
+  width: 90%;
+  margin: 2rem;
+}
+
+.mainHome__header {
+  text-align: center;
+}
+
+.mainHome__welcome {
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+.mainHome__sectionFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .foto{
+  width: 20%;
+} */
+
+@media (min-width: 34.38rem) {
+  .mainHome__sectionFlex {
+    display: block;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .mainHome {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 75rem) {
+  .mainHome {
+    width: 70%;
+  }
+}
+
+/* VERHAAL PAGE */
+.bodyVerhaal {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 0, 0, 0),
+      rgba(255, 0, 0, 0.2)
+    ),
+    url("/img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mainVerhaal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* width: 90%; */
+}
+
+.mainVerhaal__header {
+  color: white;
+  text-align: center;
+  margin-top: 5rem;
+  padding: 1.5rem;
+}
+
+
+.mainVerhaal__playButton {
+  /*ONDERKANT*/
+  width: 0;
+  height: 0;
+  border: none;
+  margin-left: 30%;
+  margin-top: 50%;
+  left: -2.7rem;
+  top: -5rem;
+  position: relative;
+  border-top: 10rem solid transparent;
+  border-bottom: 10rem solid transparent;
+  border-left: 20rem solid #760e1f;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mainVerhaal__playButton::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 30%;
+  margin-top: 50%;
+  left: -20rem;
+  top: -11rem;
+  position: absolute;
+  border-top: 10rem solid transparent;
+  border-bottom: 10rem solid transparent;
+  border-left: 20.5rem solid #d11937;
+}
+
+.mainVerhaal__playButton:active::after {
+  transform: translateY(5%);
+}
+
+.mainVerhaal__playButton:active {
+  background-color: transparent;
+}
+
+@media (min-width: 28.13rem) {
+  .mainVerhaal__playButton {
+    /*ONDERKANT*/
+    margin-left: 20%;
+    margin-top: 40%;
+    /* left: -2.7rem;
+    top: -5rem; */
+    border-top: 15rem solid transparent;
+    border-bottom: 15rem solid transparent;
+    border-left: 25rem solid #760e1f;
+  }
+
+  .mainVerhaal__playButton::after {
+    margin-left: 20%;
+    margin-top: 40%;
+    left: -25rem;
+    top: -16rem;
+    border-top: 15rem solid transparent;
+    border-bottom: 15rem solid transparent;
+    border-left: 25.5rem solid #d11937;
+  }
+}
+
+@media (min-width: 46.88rem) {
+  .mainVerhaal__playButton {
+    /*ONDERKANT*/
+    left: -5rem;
+    top: -25rem;
+  }
+}
+@media (min-width: 53.13rem) {
+  .mainVerhaal__playButton {
+    /*ONDERKANT*/
+    left: -10rem;
+    top: -25rem;
+  }
+}
+@media (min-width: 81.25rem) {
+  .mainVerhaal__playButton {
+    /*ONDERKANT*/
+    left: -12rem;
+    top: -45rem;
+  }
+}
+
+/* INTRO PAGE */
+.u-bodyIntro {
+  background-color: #444;
+}
+
+.mainIntro {
+  width: 80%;
+}
+
+.mainIntro__audioIntro {
+  visibility: hidden;
+  width: 2rem;
+  height: 2rem;
+  float: right;
+}
+
+.mainIntro__pFadeIn {
+  margin: 3rem 3rem;
+  line-height: 1.5;
+  opacity: 0;
+  color: white;
+  text-shadow: 0 0 0.5rem white;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.mainIntro__pFadeIn--first {
+  animation-delay: 1s;
+}
+
+.mainIntro__pFadeIn--second {
+  animation-delay: 4s;
+}
+
+.mainIntro__pFadeIn--third {
+  animation-delay: 8s;
+}
+
+.mainIntro__pFadeIn--fourth {
+  animation-delay: 11s;
+}
+
+.mainIntro__pFadeIn--fifth {
+  animation-delay: 14s;
+}
+
+.stopButton {
+  float: left;
+  padding: 0.5rem 1.5rem;
+  margin: 2rem;
+  color: white;
+  background-color: black;
+  border: 0.2rem solid black;
+}
+
+.stopButton--naastNext {
+  /*chicago*/
+  position: absolute;
+  top: 86%;
+  float: none;
+}
+
+.skipButton {
+  float: right;
+  padding: 0.5rem 1.5rem;
+  margin: 2rem;
+  background-color: transparent;
+  border: 0.2rem solid white;
+  color: white;
+  animation-name: skip;
+  animation-duration: 13s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0.7;
+}
+
+.skipButton:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.skipButton:active {
+  background-color: #3a3a3a;
+  border-color: #3a3a3a;
+}
+
+.nextButton {
+  font-size: 1.6rem;
+  border: 0.2rem solid white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.nextButton--nextAnimation {
+  animation-name: next;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.nextAnimation--introDuration {
+  /*intro*/
+  animation-duration: 16s;
+}
+
+.nextAnimation--chicagoDuration {
+  /*chiago en ala part1*/
+  animation-duration: 5s;
+}
+
+.nextAnimation--alaDurationPart2 {
+  /*ala part 2 en 3*/
+  animation-duration: 5.5s;
+}
+
+.nextButton:hover {
+  background-color: #d30038;
+  border: #d30038;
+  color: white;
+}
+.nextButton:active {
+  background-color: #d30038;
+  border: #d30038;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    color: transparent;
+    text-shadow: 0 0 0.5rem white;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 0 white;
+  }
+}
+
+@keyframes skip {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes next {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  95% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 31.25rem) {
+  /*VERGEET STOP EN SKIP BUTTON NIET*/
+  .mainIntro {
+    width: 90%;
+    font-size: 2rem;
+  }
+
+  .stopButton {
+    padding: 0.5rem 2rem;
+    margin: 2rem;
+  }
+
+  .skipButton {
+    padding: 0.5rem 2rem;
+    margin: 2rem;
+  }
+
+  .nextButton {
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+  }
+}
+
+/* MAP CHICAGO EN HOMS PAGE*/
+.container__img{
+  height: 80vh;
+  margin-top: 10rem;
+  display: block;
+}
+
+.container__img__map {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  animation: zoomIn 4s forwards;
+}
+
+.container__img__punaise {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  animation: drop 1s forwards;
+  animation-delay: 4s;
+}
+
+@keyframes drop {
+  from {
+    transform: scale(2);
+    top: 5rem;
+    left: 20rem;
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    top: 26rem;
+    opacity: 1;
+    left: 40rem;
+  }
+}
+
+@supports(display: flex){
+  .container__img {
+    margin: 0rem;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container__img__map {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    animation: zoomIn 4s forwards;
+  }
+  
+  .container__img__punaise {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    animation: drop 1s forwards;
+    animation-delay: 4s;
+  }
+
+  @keyframes drop {
+    from {
+      transform: scale(2);
+      /* top: 0;
+      left: 0; */
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      /* top: 38vh; */
+      opacity: 1;
+      /* left: 12vw; */
+    }
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+
+/* INTRO ALA'A PAGE*/
+.position {
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.postition__container__chat-bubble {
+  max-width: 91rem;
+  min-width: 35rem;
+  width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+  height: 20rem;
+  background: red;
+  border-radius: 3rem;
+  position: relative;
+}
+
+.postition__container__chat-bubble > p {
+  padding: 3rem;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.postition__container__chat-bubble::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 20rem;
+  margin-left: -3.8rem;
+  width: 0;
+  height: 0;
+  border-left: 3.8rem solid transparent;
+  border-right: 3.8rem solid transparent;
+  border-top: 5.2rem solid red;
+}
+
+.position__container__AlaImg {
+  margin-top: 3rem;
+}
+
+.nextButton--part2 {
+  display: none;
+}
+
+.nextButton--part3 {
+  display: none;
+}
+
+/* hier rem gebruiken in plaats van px. 1 rem = standaard 16px. Dus 500/ 16 = 31.25rem */
+@media (min-width: 31.25rem) {
+  .postition__container__chat-bubble {
+    width: 65%;
+  }
+}
+@media (min-width: 50rem) {
+  .postition__container__chat-bubble {
+    width: 55%;
+  }
+  .postition__container__chat-bubble > p {
+    /* padding: 3rem; */
+    font-size: 2.8rem;
+  }
+  .postition__container__chat-bubble {
+    min-width: 50rem;
+  }
+}
+
+/* TELFOON PAGE */
+.samsung {
+  position: relative;
+  width: 32rem;
+  height: 66rem;
+  background: gray;
+  border-radius: 4rem;
+  margin: 0rem 3rem;
+}
+
+.samsung__screen {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  right: 0.6rem;
+  left: 0.6rem;
+  background: url("../img/background_phone.png");
+  border-radius: 2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 8rem));
+  grid-template-rows: repeat(8, minmax(0, 8rem));
+}
+
+.samsung__screen__title {
+  margin: 1.5rem;
+  color: black;
+  font-size: 2.4rem;
+}
+
+.samsung__screen__messageP {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  color: black;
+}
+
+.samsung__screen__icon {
+  height: 5rem;
+  width: 5rem;
+  margin: auto;
+}
+
+.notification {
+  animation: notification 0.5s forwards;
+}
+
+@keyframes notification {
+  from {
+    height: 0;
+  }
+  to {
+    height: 8rem;
+  }
+}
+
+.samsung__screen__icon:nth-of-type(1) {
+  height: 8rem;
+  width: 100%;
+  background: white;
+  margin: 0;
+  grid-column: 1 / span 4;
+  grid-row: 1;
+  display: none;
+  cursor: pointer;
+}
+
+.samsung__screen__icon:nth-of-type(2) {
+  background-image: url("../img/whatsapp.png");
+  grid-column: 1;
+  grid-row: 8;
+}
+
+.samsung__screen__icon:nth-of-type(3) {
+  background-image: url("../img/facebook.png");
+  grid-column: 2;
+  grid-row: 8;
+  animation: shaking 1.5s;
+  cursor: pointer;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shaking {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.samsung__screen__icon:nth-of-type(4) {
+  background-image: url("../img/instagram.png");
+  grid-column: 3;
+  grid-row: 8;
+}
+
+.samsung__screen__icon:nth-of-type(5) {
+  background-image: url("../img/twitter.png");
+  grid-column: 4;
+  grid-row: 8;
+}
+
+@media (min-width: 25rem) {
+  .samsung {
+    margin: 0rem 20%;
+  }
+}
+@media (min-width: 40.63rem) {
+  .samsung {
+    margin: 0rem 35%;
+  }
+}
+
+/* CHAT PAGE */
+.u-bodyBgTelefoon {
+  background-color: #e2d6c5;
+}
+
+.telefoon {
+  position: relative;
+  width: 32rem;
+  height: 66rem;
+  background: gray;
+  border-radius: 4rem;
+  margin: 0rem 3rem;
+}
+
+.telefoon__scherm {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  right: 0.6rem;
+  left: 0.6rem;
+  background: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.telefoon__scherm__chat {
+  width: 30rem;
+  border: solid 0.1rem #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.telefoon__scherm__chat__container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.telefoon__scherm__chat__container__message {
+  border-radius: 2rem;
+  padding: 0.8rem 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.telefoon__scherm__chat__yours {
+  align-items: flex-start;
+}
+
+.telefoon__scherm__chat__yours .telefoon__scherm__chat__container__message {
+  margin-right: 25%;
+  background-color: #eee;
+  position: relative;
+}
+
+.telefoon__scherm__chat__yours .telefoon__scherm__chat__container__message .telefoon__scherm__chat__container__message--last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -0.7rem;
+  height: 2rem;
+  width: 2rem;
+  background: #eee;
+  border-bottom-right-radius: 1.5rem;
+}
+.telefoon__scherm__chat__yours .telefoon__scherm__chat__container__message .telefoon__scherm__chat__container__message--last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -1rem;
+  width: 1rem;
+  height: 2rem;
+  background: white;
+  border-bottom-right-radius: 1rem;
+}
+
+.telefoon__scherm__chat__mine {
+  align-items: flex-end;
+}
+
+.telefoon__scherm__chat__mine .telefoon__scherm__chat__container__message {
+  color: white;
+  margin-left: 25%;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+.telefoon__scherm__chat__mine .telefoon__scherm__chat__container__message .telefoon__scherm__chat__container__message--last:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -0.8rem;
+  height: 2rem;
+  width: 2rem;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background-attachment: fixed;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.telefoon__scherm__chat__mine .telefoon__scherm__chat__container__message .telefoon__scherm__chat__container__message--last:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -1rem;
+  width: 1rem;
+  height: 2rem;
+  background: white;
+  border-bottom-left-radius: 1rem;
+}
+
+.telefoon__scherm__chat__container__message--thanks {
+  display: none;
+}
+
+.telefoon__scherm__chat__mine__message--option1 {
+  display: none;
+}
+
+.telefoon__scherm__chat__mine__message--option2  {
+  display: none;
+}
+
+.telefoon__scherm__chat__mine__message--option3 {
+  display: none;
+}
+
+.telefoon__scherm__chat__mine__message--option4 {
+  display: none;
+}
+
+.telefoon__scherm__options {
+  height: 20rem;
+  width: 100%;
+  background: red;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.telefoon__scherm__options__option {
+  height: 7rem;
+  width: 14rem;
+  margin: 0rem 0.7rem;
+  background: white;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 24rem) {
+  .telefoon {
+    margin: 0rem 20%;
+  }
+}
+@media (min-width: 40.63rem) {
+  .telefoon {
+    margin: 0rem 35%;
+  }
+}
+
+/* SPYGADGETS PAGE */
+.bodySpygadget {
+  background-color: #bfa782;
+}
+
+.mainSpygadget {
+  color: white;
+  height: 100vh;
+}
+
+.containerSpygadget {
+  width: 90%;
+  height: 80rem;
+  border-radius: 0.5rem;
+  margin-left: 45rem;
+}
+
+.containerSpygadget__instuction {
+  line-height: 1.5;
+  font-size: 2rem;
+}
+
+.containerSpygadget__intems {
+  margin-top: 5rem;
+} 
+
+.containerSpygadget__intems__list {
+  width: 100%;
+  height: 100%;
+}
+
+.containerSpygadget__intems__list__item {
+  position: absolute;
+  z-index: 1;
+  padding: 2rem 1rem;
+  background-color: #d82400;
+  list-style: none;
+  cursor: pointer;
+}
+
+.containerSpygadget__intems__list__item--right {
+  margin-left: 40%;
+}
+
+.containerSpygadget__intems__list__item--bottom {
+  margin-top: 30%;
+}
+
+ .containerSpygadget__character {
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s all;
+} 
+
+.containerSpygadget__figure {
+  padding: 4rem 2rem;
+}
+
+.containerSpygadget__figure__img {
+  width: 100%;
+}
+
+.containerSpygadget__intems__list__item__modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 10rem; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.2); /* Black w/ opacity */
+}
+
+.modal__content {
+  background-color: #bec2c6;
+  margin: 5% auto;
+  padding-bottom: 7rem;
+  width: 90%;
+  box-shadow: 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal__content__h2 {
+  color: black;
+  font-weight: 600;
+  padding: 1.5rem 1.6rem;
+  font-size: 3.2rem;
+}
+
+.modal__content__p {
+  padding: 1.5rem 1.8rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: black;
+}
+
+.modal__content__spyImg {
+  width: 40%;
+  padding: 1rem;
+  float: right;
+}
+
+.opnieuwButton__modal {
+  float: left;
+  padding: 0.5rem 1.5rem;
+  margin: 2rem;
+  color: white;
+  background-color: #3e4247;
+  border: 0.2rem solid #3e4247;
+}
+
+.nextButton__modal {
+  float: right;
+  padding: 0.5rem 1.5rem;
+  margin: 2rem;
+  border: 0.2rem solid white;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 55%;
+}
+
+.nextButton__modal:hover {
+  background-color: #d30038;
+  border: #d30038;
+  color: white;
+}
+.nextButton__modal:active {
+  background-color: #d30038;
+  border: #d30038;
+  color: white;
+}
+
+@supports(display: flex) and (display: grid){
+  .mainSpygadget {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .containerSpygadget {
+    width: 90%;
+    height: 80rem;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    border-radius: 0.5rem;
+    margin-left: 0rem;
+  }
+  
+  .containerSpygadget__instuction {
+    grid-column: 1 / 13;
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+  
+  .containerSpygadget__intems {
+    grid-column: 1 / 13;
+    grid-row: span 3;
+    margin-top: 5rem;
+  }
+
+  .containerSpygadget__character {
+    grid-column: 1 / 13;
+    grid-row: span 3;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s all;
+  }
+}
+
+@media (min-width: 28.13rem) {
+  .containerSpygadget {
+    width: 70%;
+  }
+  .containerSpygadget__intems {
+    margin: 7rem 0rem;
+  }
+  .containerSpygadget__intems__list__item--bottom {
+    margin-top: 20%;
+  }
+  .modal__content {
+    padding-bottom: 15rem;
+  }
+  .opnieuwButton__modal {
+    margin-top: 15%;
+  }
+  .nextButton__modal {
+    margin-top: 14%;
+    left: 65%;
+  }
+}
+@media (min-width: 38.75rem) {
+  .containerSpygadget__instuction {
+    font-size: 2.2rem;
+  }
+  .containerSpygadget__intems {
+    margin: 7rem 0rem;
+  }
+  .containerSpygadget__intems__list__item {
+    padding: 2.5rem 2rem;
+    font-size: 2rem;
+  }
+  .containerSpygadget__intems__list__item--right {
+    margin-left: 35%;
+  }
+  .containerSpygadget__intems__list__item--bottom {
+    margin-top: 15%;
+  }
+  .containerSpygadget__figure__img {
+    width: 85%;
+  }
+}
+@media (min-width: 44.38rem) {
+  .modal__content {
+    padding-bottom: 25rem;
+  }
+  .opnieuwButton__modal {
+    margin-top: 25%;
+    padding: 1rem 3rem;
+  }
+  .nextButton__modal {
+    margin-top: 23%;
+    padding: 1rem 3rem;
+  }
+}
+@media (min-width: 46.25rem) {
+  .containerSpygadget {
+    width: 60%;
+  }
+  .containerSpygadget__intems__list__item--right {
+    margin-left: 30%;
+  }
+  .containerSpygadget__intems__list__item--bottom {
+    margin-top: 13%;
+  }
+}
+@media (min-width: 53.13rem) {
+  .opnieuwButton__modal {
+    margin-top: 19%;
+  }
+  .nextButton__modal {
+    margin-top: 17%;
+    left: 75%;
+  }
+  .modal__content__spyImg {
+    width: 30%;
+  }
+}
+@media (min-width: 59.38rem) {
+  .containerSpygadget {
+    width: 50%;
+  }
+  .containerSpygadget__intems {
+    margin: 5rem 0rem;
+  }
+  .containerSpygadget__intems__list__item--right {
+    margin-left: 25%;
+  }
+  .containerSpygadget__intems__list__item--bottom {
+    margin-top: 10%;
+  }
+}
+@media (min-width: 75rem) {
+  .containerSpygadget__intems__list__item--right {
+    margin-left: 30%;
+  }
+  .containerSpygadget__intems__list__item--bottom {
+    margin-top: 7%;
+  }
+  .containerSpygadget__figure {
+    margin-left: 6rem;
+  }
+  .containerSpygadget__figure__img {
+    width: 70%;
+  }
+  .opnieuwButton__modal {
+    margin-top: 12%;
+  }
+  .nextButton__modal {
+    margin-top: 12%;
+    left: 80%;
+  }
+  .modal__content__spyImg {
+    width: 25%;
+  }
+}
+@media(min-width: 100rem){
+  .modal__content {
+    padding-bottom: 30rem;
+    width: 80%;
+  }
+}
+
+/* FRIEND PAGE */
+.position__container__OmarImg {
+  margin-top: 6rem;
+}
+
+/* PROTEST PAGE */
+.protestVideo {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.protestVideo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.protestVideo__container__video {
+  width: 100%;
+  height: 100%;
+}
+
+.nextButton--videoButton {
+  top: 70%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@media(min-width: 28.13rem){
+  .nextButton--videoButton {
+    top: 90%;
+  }
+}
+
+/* VLUCHTROUTES PAGE */
+.protestVideo__vluchtrouteInstructie {
+  line-height: 1.5;
+  margin: 1rem 2rem;
+}
+
+.opnieuwButton__modal--vluchtroutes {
+  float: right;
+}
+
+
+@supports(display: flex){
+  .slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .slider__image__container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+
+
+.slider {
+  height: 100%;
+  width: 100%;
+  /* display: inline-block; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; */
+}
+
+.slider__image__container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: auto;
+}
+
+.slider__image__container__figure {
+  display: none;
+  cursor: pointer;
+}
+
+.slider__image__container__figure__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slider__image__container__prev,
+.slider__image__container__next {
+  cursor: pointer;
+  width: auto;
+  padding: 1rem;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.6s ease;
+  border-radius: 0 0.3rem 0.3rem 0;
+  user-select: none;
+}
+
+.slider__image__container__prev:hover,
+.slider__image__container__next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.slider__image__container__figure__text {
+  color: red;
+  margin-top: 1rem;
+  font-size: 2rem;
+  position: absolute;
+  text-align: center;
+}
+
+.slider__image__container__figure__numbertext {
+  color: red;
+  font-size: 3rem;
+  padding: 0.8rem 1.2rem;
+  position: absolute;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 42.5rem){
+  .slider__image__container {
+    height: 70%;
+    width: 70%;
+  }
+}
+@media (min-width: 59.38rem){
+  .slider__image__container {
+    height: 60%;
+    width: 60%;
+  }
+}
+
+@media (min-width: 75rem){
+  .slider__image__container {
+    height: 40%;
+    width: 40%;
+  }
+}
+
+/* TIME JUMP PAGE */
+.u-bodyBgTimeJump {
+  background-color: #a98654;
+}
+
+.scheurInstructie{
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeJump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-family: "Zilla Slab", serif;
+  overflow: hidden;
+}
+
+.timeJump__kalenderP {
+  margin: 0 0 0.3rem;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+  pointer-events: none;
+}
+
+.timeJump__calendar {
+  position: relative;
+  width: 15.2rem;
+  cursor: default;
+  user-select: none;
+}
+
+.timeJump__calendar::before,
+.timeJump__calendar::after {
+  content: "";
+  position: absolute;
+  top: -2.8rem;
+  left: 4rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ddd;
+  z-index: 3;
+}
+
+.timeJump__calendar::after {
+  left: initial;
+  right: 4rem;
+}
+
+.pages {
+  position: relative;
+  text-align: center;
+  background-color: #eee;
+  box-shadow: 0 1rem 0rem #a5a4a4;
+}
+
+.pages::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4.5rem;
+  background-color: indianred;
+  bottom: 100%;
+  left: 0;
+  z-index: 2;
+}
+
+.page {
+  position: relative;
+  padding: 2rem 3rem 1.5rem;
+  cursor: pointer;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  bottom: 99%;
+  left: 0;
+  display: block;
+  background-color: linear-gradient(
+      -45deg,
+      #eee 1rem,
+      #eee 1rem,
+      #eee 1rem,
+      transparent 0
+    ),
+    linear-gradient(45deg, #eee 1rem, transparent 0);
+  background-position: left top;
+  background-repeat: repeat-x;
+  height: 1rem;
+  width: 100%;
+}
+
+.month,
+.day-name {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.day {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.year {
+  font-size: 1.2rem;
+}
+
+.tear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #eee;
+  transform-origin: top left;
+  box-shadow: 0 0 1rem -0.1rem rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  animation: tear-animation 0.8s linear forwards;
+}
+
+@keyframes tear-animation {
+  0% {
+    transform: rotate(0deg);
+    top: 0;
+    opacity: 1;
+  }
+  20% {
+    transform: rotate(9deg);
+    top: 0;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    top: 20rem;
+    opacity: 0;
+  }
+}
+
+/* flying img */
+.timeJump__movingPictureRight {
+  animation-name: flyingRight;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  position: fixed;
+  animation-fill-mode: forwards;
+}
+
+.timeJump__movingPictureRight--2 {
+  opacity: 0;
+  animation-delay: 17s;
+}
+
+.timeJump__movingPictureRight > img {
+  width: 50%;
+}
+
+.timeJump__movingPictureLeft {
+  animation-name: flyingLeft;
+  animation-delay: 3s;
+  opacity: 0;
+  animation-duration: 17s;
+  animation-timing-function: linear;
+  position: fixed;
+  animation-fill-mode: forwards;
+}
+
+.timeJump__movingPictureLeft--2 {
+  opacity: 0;
+  animation-delay: 25s;
+}
+
+.timeJump__movingPictureLeft > img {
+  width: 30%;
+}
+
+@keyframes flyingRight {
+  0% {
+    transform: translate(-50rem, 0rem);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(150rem, 20rem);
+    opacity: 0;
+  }
+}
+
+@keyframes flyingLeft {
+  0% {
+    transform: translate(120rem, -15rem);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-20rem, -5rem);
+    opacity: 0;
+  }
+}
+
+
+/* EINDE */
+.einde {
+  margin: 1rem;
+  line-height: 1.5;
+}
+
+.einde__header{
+  font-weight: 600;
+}
+
+.einde__p {
+  pointer-events: auto;
+}
+
+.einde__Img{
+  margin: 2rem 0rem;
+  width: 90%;
+}
+
+.einde__creditsP{
+  font-size: 1.4rem;
+}
+
+@media(min-width: 37.5rem){
+  .einde{
+    width: 80%;
+    margin: auto;
+  }
+}
+@media(min-width: 56.25rem){
+  .einde{
+    width: 70%;
+  }
+}
+@media(min-width: 68.75rem){
+  .einde__Img{
+    width: 70%;
+  }
+  .nextButton--einde{
+    margin: 4rem 4rem;
+  }
+}
+
+/* PERSONEN EN DOCUMENTAIRE PAGE*/
+.personen {
+  margin: 1rem;
+  line-height: 1.5;
+}
+
+.personen__header {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+.personen__p {
+  padding-left: 1rem;
+}
+
+.personen__section {
+  padding: 1rem;
+}
+
+.personen__section--aous {
+  margin-bottom: 4rem;
+}
+
+.personen__section__h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.personen__section__img {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.personen__section__img--omar {
+  width: 70%;
+}
+
+@media (min-width: 28.13rem) {
+  .personen__section__img--omar {
+    width: 50%;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .personen {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 56.25rem) {
+  .personen__section__img--omar {
+    width: 35%;
+  }
+}
+
+@media (min-width: 75rem) {
+  .personen {
+    width: 65%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  .personen__section__img--omar {
+    width: 25%;
+  }
+}

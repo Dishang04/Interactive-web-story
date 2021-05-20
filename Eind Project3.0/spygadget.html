@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Spygadgets</title>
+  </head>
+  <body class="bodySpygadget">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mainSpygadget">
+        <article class="containerSpygadget">
+            <p class="containerSpygadget__instuction">
+              In Chicago koopt Ala'a spygadgets, zodat de protestanten die in Syrië
+              kunnen gebruiken om de protesten stiekem te filmen. Kies een spygadget die
+              je denkt die goed is.
+            </p>
+            <div class="containerSpygadget__intems">
+              <ul class="containerSpygadget__intems__list">
+                <li class="containerSpygadget__intems__list__item" id="js--camera--pen">
+                  Camera pen
+                </li>
+                <li
+                  id="js--camera--pen--modal"
+                  class="containerSpygadget__intems__list__item__modal"
+                >
+                  <section class="modal__content">
+                    <h2 class="modal__content__h2">Camera pen</h2>
+                    <figure class="containerSpygadget__figure modal__content__spyImg">
+                      <img class="containerSpygadget__figure__img" src="/img/pen.jpg" alt="afbeelding pen met geheime camera" />
+                    </figure>
+                    <p class="modal__content__p">
+                      De camera pen is een goede keuze.
+                      Wanneer een protestant wordt opgepakt is de kans klein dat het leger ontdekt dat de pen een geheime camera heeft.
+                    </p>
+                    <button
+                      class="opnieuwButton__modal"
+                      type="button"
+                      name="button"
+                      onclick="window.location.reload();"
+                    >
+                      Opnieuw
+                    </button>
+
+                    <button
+                      class="nextButton__modal nextButton--nextAnimation"
+                      type="button"
+                      name="button"
+                      onclick="window.location.href='homs.html'"
+                    >
+                      Volgende &#8250;
+                    </button>
+                  </section>
+                </li>
+
+                <li
+                  class="containerSpygadget__intems__list__item containerSpygadget__intems__list__item--right"
+                  id="js--bluetooth"
+                >
+                  Bluetooth camera
+                </li>
+                <li
+                  id="js--bluetooth--camera--modal"
+                  class="containerSpygadget__intems__list__item__modal"
+                >
+                  <section class="modal__content">
+                    <h2 class="modal__content__h2">Bluetooth camera</h2>
+                    <figure class="containerSpygadget__figure modal__content__spyImg">
+                      <img class="containerSpygadget__figure__img" src="/img/bluetoothCamera.jpg" alt="afbeelding van bluethooth headset met geheime camera" />
+                    </figure>
+                    <p class="modal__content__p">
+                      Dit is een bluetooth headset met een geheime camera.
+                      Dit is een goed gekozen gadget, omdat deze nog erg onbekend is.
+                    </p>
+                    <button
+                      class="opnieuwButton__modal"
+                      type="button"
+                      name="button"
+                      onclick="window.location.reload();"
+                    >
+                      Opnieuw
+                    </button>
+
+                    <button
+                      class="nextButton__modal nextButton--nextAnimation"
+                      type="button"
+                      name="button"
+                      onclick="window.location.href='homs.html'"
+                    >
+                      Volgende &#8250;
+                    </button>
+                  </section>
+                </li>
+
+                <li
+                  class="containerSpygadget__intems__list__item containerSpygadget__intems__list__item--bottom"
+                  id="js--camera--bril"
+                >
+                  Camera bril
+                </li>
+                <li
+                  id="js--camera--bril--modal"
+                  class="containerSpygadget__intems__list__item__modal"
+                >
+                  <section class="modal__content">
+                    <h2 class="modal__content__h2">Camera bril</h2>
+                    <figure class="containerSpygadget__figure modal__content__spyImg">
+                      <img class="containerSpygadget__figure__img" src="/img/bril.jpg" alt="afbeelding van een bril met een camera" />
+                    </figure>
+                    <p class="modal__content__p">
+                      De camera bril is niet zo'n goede keuze. De bril is erg prijzig voor de protestanten in Syrië.
+                      De kans is ook groot wanneer ze opgepakt worden met de bril op, dat het leger de lens gaat vinden.
+                    </p>
+                    <button
+                      class="opnieuwButton__modal"
+                      type="button"
+                      name="button"
+                      onclick="window.location.reload();"
+                    >
+                      Opnieuw
+                    </button>
+
+                    <button
+                      class="nextButton__modal nextButton--nextAnimation"
+                      type="button"
+                      name="button"
+                      onclick="window.location.href='homs.html'"
+                    >
+                      Volgende &#8250;
+                    </button>
+                  </section>
+                </li>
+
+                <li
+                  class="containerSpygadget__intems__list__item containerSpygadget__intems__list__item--right containerSpygadget__intems__list__item--bottom"
+                  id="js--horloge--camera"
+                >
+                  Horloge camera
+                </li>
+                <li
+                id="js--horloge--camera--modal"
+                class="containerSpygadget__intems__list__item__modal"
+              >
+                <section class="modal__content">
+                  <h2 class="modal__content__h2">Horloge camera</h2>
+                  <figure class="containerSpygadget__figure modal__content__spyImg">
+                    <img class="containerSpygadget__figure__img" src="/img/horloge.jpg" alt="afbeelding horloge met camera" />
+                  </figure>
+                  <p class="modal__content__p">
+                    De horloge met geheime camera is een goede keuze. Het product is betaalbaar en het is niet zo bekend.
+                    Een nadeel is dat je er niet altijd goed mee kan filmen, omdat het om je pols zit.
+                  </p>
+                  <button
+                    class="opnieuwButton__modal"
+                    type="button"
+                    name="button"
+                    onclick="window.location.reload();"
+                  >
+                    Opnieuw
+                  </button>
+
+                  <button
+                    class="nextButton__modal nextButton--nextAnimation"
+                    type="button"
+                    name="button"
+                    onclick="window.location.href='homs.html'"
+                  >
+                    Volgende &#8250;
+                  </button>
+                </section>
+              </li>
+              </ul>
+            </div>
+
+            <div class="containerSpygadget__character">
+              <figure class="containerSpygadget__figure">
+                  <img class="containerSpygadget__figure__img" src="/img/cart.png" alt="afbeelding winkelmandje" />
+                </figure>
+            </div>
+          </article>
+    </main>
+    <footer>
+        <button
+        class="stopButton"
+        type="button"
+        name="button"
+        onclick="window.location.href='index.html'"
+      >Stop
+      </button>
+    </footer>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/spygadget.js"></script>
+
+  </body>
+</html>

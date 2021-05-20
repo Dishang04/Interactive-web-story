@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Telefoon</title>
+  </head>
+  <body class="u-bodyBgTelefoon">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="samsung">
+        <section class="samsung__screen">
+          <div class="samsung__screen__icon" id="js--notification">
+            <h1 class="samsung__screen__title">Facebook</h1>
+            <p class="samsung__screen__messageP">Friend: We need your help</p>
+          </div>
+          <div class="samsung__screen__icon"></div>
+          <div class="samsung__screen__icon" id="js--facebook-logo"></div>
+          <div class="samsung__screen__icon"></div>
+          <div class="samsung__screen__icon"></div>
+        </section>
+    </main>
+    <footer>
+        <button
+        class="stopButton"
+        type="button"
+        name="button"
+        onclick="window.location.href='index.html'"
+      >Stop
+      </button>
+    </footer>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/telefoon.js"></script>
+  </body>
+</html>

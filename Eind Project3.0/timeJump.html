@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Time jump</title>
+  </head>
+  <body class="u-bodyBgTimeJump">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <p class="scheurInstructie">Klik op de kalender om de bladzijdes er af te scheuren.</p>
+      <article class="timeJump">
+        <figure class="timeJump__movingPictureRight">
+          <img src="/img/flyingImg1.jfif" alt="foto explosie">
+        </figure>
+  
+        <figure class="timeJump__movingPictureLeft">
+          <img src="/img/flyingImg2.jpg" alt="foto leger">
+        </figure>
+  
+        <figure class="timeJump__movingPictureRight timeJump__movingPictureRight--2">
+          <img src="/img/flyingImg3.jpg" alt="foto explosie">
+        </figure>
+  
+        <figure class="timeJump__movingPictureLeft timeJump__movingPictureLeft--2">
+          <img src="/img/flyingImg4.jfif" alt="foto leger">
+        </figure>
+        
+        <div class="timeJump__calendar">
+          <div class="pages"></div>
+        </div>
+
+      </article>
+    </main>
+     <button
+        class="stopButton stopButton--naastNext"
+        type="button"
+        name="button"
+        onclick="window.location.href='index.html'"
+      >Stop
+      </button>
+    <script type="text/javascript" src="/js/timeJump.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
+</html>

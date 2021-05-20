@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Chat</title>
+  </head>
+  <!-- als je het echt netjes wilt doen dien je hier een utility van te maken. Dus u-bodyBgTelefoon -->
+  <body class="u-bodyBgTelefoon">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="telefoon">
+      <article class="telefoon__scherm">
+        <section class="telefoon__scherm__chat">
+          <!-- telefoon__scherm__chat__container -->
+          <div class="telefoon__scherm__chat__mine telefoon__scherm__chat__container">
+            <!-- telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last -->
+            <p class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last">See you later.</p>
+          </div>
+          <ul class="telefoon__scherm__chat__yours telefoon__scherm__chat__container">
+            <!-- it looks like a list, it smells like a list.... -->
+            <li class="telefoon__scherm__chat__container__message">Hi!</li>
+            <li class="telefoon__scherm__chat__container__message">You there?</li>
+            <li class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last">
+              We need your help. We are gonna protest soon. Can you help us?
+            </li>
+          </ul>
+          <ul class="telefoon__scherm__chat__mine telefoon__scherm__chat__container">
+            <li class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last">I can help you.</li>
+            <!-- telefoon__scherm__chat__mine__message telefoon__scherm__chat__mine__message--last telefoon__scherm__chat__mine__message--option1 -->
+            <li class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last telefoon__scherm__chat__mine__message--option1">
+              I'm gonna send some escape routes. Make sure you guys are safe.
+            </li>
+            <li class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last telefoon__scherm__chat__mine__message--option2">I'm gonna upload the videos.</li>
+            <li class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last telefoon__scherm__chat__mine__message--option3">The spygadgets are on there way.</li>
+            <li class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--last telefoon__scherm__chat__mine__message--option4">
+              I'm gonna plan the protest on Facebook.
+            </li>
+          </ul>
+          <div class="telefoon__scherm__chat__yours telefoon__scherm__chat__container">
+            <div class="telefoon__scherm__chat__container__message telefoon__scherm__chat__container__message--thanks">Thanks for your help!</div>
+          </div>
+        </section>
+        <section class="telefoon__scherm__options">
+          <p class="telefoon__scherm__options__option" id="js--option1">
+            Ik ga je helpen. Ik stuur wat vluchtroutes door.
+          </p>
+          <p class="telefoon__scherm__options__option" id="js--option2">
+            Ik upload de video.
+          </p>
+          <p class="telefoon__scherm__options__option" id="js--option3">
+            De spygadets zijn onderweg.
+          </p>
+          <p class="telefoon__scherm__options__option" id="js--option4">
+            Ik plan het protest op Facebook.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <button
+        class="stopButton"
+        type="button"
+        name="button"
+        onclick="window.location.href='index.html'"
+      >
+        Stop
+      </button>
+    </footer>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
+  </body>
+</html>

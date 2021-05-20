@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Ala'a</title>
+  </head>
+  <body class="u-bodyBgColor">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="position">
+        <section class="position__container">
+          <div class="postition__container__chat-bubble">
+            <p id="js--text">Hallo ik ben Ala'a, ik ben 19 jaar en woon in Chicago en help via het internet de revolutie in Syrië</p>
+          </div>
+        </section>
+        <img class="position__container__AlaImg" src="img/alaa.png" alt="Foto van meisje met een hoofddoek">
+        <button id="js--button-part1" class="nextButton nextButton--nextAnimation nextAnimation--chicagoDuration nextButton--part1">Volgende &#8250;</button>
+        <button id="js--button-part2" class="nextButton nextButton--nextAnimation nextAnimation--alaDurationPart2 nextButton--part2">Volgende &#8250;</button>
+        <button id="js--button-part3" class="nextButton nextButton--nextAnimation nextAnimation--alaDurationPart2 nextButton--part3" >Volgende &#8250;</button>
+      </main>
+      <footer>
+        <button
+        class="stopButton stopButton--naastNext"
+        type="button"
+        name="button"
+        onclick="window.location.href='index.html'"
+      >Stop
+      </button>
+      </footer>
+   
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/alaa.js"></script>
+  </body>
+</html>

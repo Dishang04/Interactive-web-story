@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Chicago Map</title>
+  </head>
+  <body class="u-bodyBgColor">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container__img">
+      <img class="container__img__map" src="img/chicago.png" alt="afbeelding van map chicago" />
+      <img src="img/punaise.png" alt="" class="container__img__punaise" />
+
+      <audio controls autoplay class="mainIntro__audioIntro"> <!--gebruikt bij intro.html-->
+        <source src="./audio/punaiseSound2.mp4" type="audio/mp4">
+        Your browser does not support the audio element.
+      </audio>
+    </main>
+    <footer>
+      <button
+      class="stopButton stopButton--naastNext"
+      type="button"
+      name="button"
+      onclick="window.location.href='index.html'"
+    >
+      Stop
+    </button>
+
+    <button
+      class="nextButton nextButton--nextAnimation nextAnimation--chicagoDuration"
+      type="button"
+      name="button"
+      onclick="window.location.href='alaa.html'"
+    >
+      Volgende &#8250;
+    </button>
+    </footer>
+  
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
+</html>

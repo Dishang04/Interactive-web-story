@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Vluchtroutes</title>
+  </head>
+  <body class="u-bodyBgColor">
+    <header>
+      <nav class="nav">
+        <div class="nav__hamburger" onclick="openNav()">&#9776;Menu</div>
+        <div id="js--myNav" class="nav__bodyOverlay">
+          <div id="js--menu--items" class="nav__bodyOverlay__content">
+            <div class="nav__bodyOverlay__content__closeButton" onclick="closeNav()"></div>
+            <p class="nav__bodyOverlay__content__menu">Menu</p>
+            <a href="home.html">Home</a>
+            <a class="nav__bodyOverlay__content__current" href="index.html">Het verhaal</a>
+            <a href="personen.html">Hoofdpersonen</a>
+            <a href="documentaire.html">Informatie documentaire</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="protestVideo">
+      <p class="protestVideo__vluchtrouteInstructie">
+        Er is een bom ontploft. Dit gebeurt regelmatig tijdens demonstraties. Kies een van de vluchtroutes door op de foto te klikken.
+      </p>
+      <section class="slider">
+        <div class="slider__image__container">
+          <a class="slider__image__container__prev" onclick="plusSlides(-1)">&#10094;</a>
+          <figure class="slider__image__container__figure fade">
+            <h1 class="slider__image__container__figure__numbertext">1 / 3</h1>
+            <img class="slider__image__container__figure__img" src="img/vluchtroute1.PNG" alt="">
+            <p class="slider__image__container__figure__text">Vluchtroute 1</p>
+          </figure>
+          <article
+                  id="js--vluchtroute1--modal"
+                  class="containerSpygadget__intems__list__item__modal"
+                >
+                  <section class="modal__content">
+                    <h2 class="modal__content__h2">Vluchtroute 1</h2>
+                    <p class="modal__content__p">
+                     Terwijl je deze vluchtroute ging rennen ben je opgepakt. Je bent nu onderweg om verhoord te worden door het leger.
+                    </p>
+                    <button
+                      class="opnieuwButton__modal opnieuwButton__modal--vluchtroutes"
+                      type="button"
+                      name="button"
+                      onclick="window.location.reload();"
+                    >
+                      Opnieuw
+                    </button>
+                  </section>
+                </article>
+
+          <figure class="slider__image__container__figure fade">
+            <h1 class="slider__image__container__figure__numbertext">2 / 3</h1>
+            <img class="slider__image__container__figure__img" src="img/vluchtroute2.PNG" alt="">
+            <p class="slider__image__container__figure__text">Vluchtroute 2</p>
+          </figure>
+          <article
+                  id="js--vluchtroute2--modal"
+                  class="containerSpygadget__intems__list__item__modal"
+                >
+                  <section class="modal__content">
+                    <h2 class="modal__content__h2">Vluchtroute 2</h2>
+                    <p class="modal__content__p">
+                     Je bent net weggekomen van het leger.
+                    </p>
+                    <button
+                      class="opnieuwButton__modal"
+                      type="button"
+                      name="button"
+                      onclick="window.location.reload();"
+                    >
+                      Opnieuw
+                    </button>
+
+                    <button
+                      class="nextButton__modal nextButton--nextAnimation"
+                      type="button"
+                      name="button"
+                      onclick="window.location.href='timeJump.html'"
+                    >
+                      Volgende &#8250;
+                    </button>
+                  </section>
+                </article>
+
+          <figure class="slider__image__container__figure fade">
+            <h1 class="slider__image__container__figure__numbertext">3 / 3</h1>
+            <img class="slider__image__container__figure__img" src="img/vluchtroute3.PNG" alt="">
+            <p class="slider__image__container__figure__text">Vluchtroute 3</p>
+          </figure>
+          <article
+                  id="js--vluchtroute3--modal"
+                  class="containerSpygadget__intems__list__item__modal"
+                >
+                  <section class="modal__content">
+                    <h2 class="modal__content__h2">Vluchtroute 3</h2>
+                    <p class="modal__content__p">
+                     Meerdere protestanten namen dezelfde route waardoor het leger in het rond ging schieten. Je bent geraakt in je been door een kogel.
+                    </p>
+                    <button
+                      class="opnieuwButton__modal opnieuwButton__modal--vluchtroutes"
+                      type="button"
+                      name="button"
+                      onclick="window.location.reload();"
+                    >
+                      Opnieuw
+                    </button>
+                  </section>
+                </article>
+          <a class="slider__image__container__next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      <button
+        class="stopButton stopButton--naastNext"
+        type="button"
+        name="button"
+        onclick="window.location.href='index.html'"
+      >Stop
+      </button>
+      </footer>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/vluchtroutes.js"></script>
+  </body>
+</html>
